@@ -18,9 +18,10 @@ class LstmLayer(nn.Module):
         super(LstmLayer, self).__init__()
 
         if embedding is None:
-            self.embed = nn.Embedding(n_vocab, d_emb)
+            self.embed = nn.Embedding(n_vocab, d_emb, padding_idx=0)
         else:
-            self.embed = nn.Embedding.from_pretrained(embedding.clone(), freeze=if_freeze)
+            self.embed = nn.Embedding.from_pretrained(
+                embedding.clone(), freeze=if_freeze, padding_idx=0)
         self.encoder = nn.LSTM(d_emb, d_ctx, n_layer, dropout=dropout,
                                bidirectional=True, batch_first=True)
 
@@ -67,7 +68,7 @@ class SelfAttLayer(nn.Module):
             nn.Linear(2 * d_ctx, d_att),
             nn.Tanh(),
             nn.Linear(d_att, 1),
-            nn.Softmax(dim=-1),
+            nn.Softmax(dim=-2),
         )
 
     def forward(self, emb_ctx):  # [bsz, T, 2*d_ctx]

@@ -23,7 +23,7 @@ def train_spin_outlier(data, config, seg, caption=''):
 
     # initialization
     embedding = data['embedding'].to(device)
-    algorithm = get_anomaly_algorithms(config_outlier['algorithm_key'][0],
+    algorithm = get_anomaly_algorithms(config_outlier['algorithm_key'][0], config_outlier['k']
                                        config_outlier['outlier_fraction'])
     spin = CapsAll(config, config_spin, embedding).to(device)
     optimizer = optim.Adam(spin.parameters(), lr=config_spin['learning_rate'])
