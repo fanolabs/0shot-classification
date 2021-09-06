@@ -1,5 +1,9 @@
 # README
 
+- Code for
+   - Unknown Intent Detection Using Gaussian Mixture Model with an Application to Zero-shot Intent Classification
+   - Reconstructing Capsule Networks for Zero-shot Intent Classification
+
 ## Environment
 
 ```
