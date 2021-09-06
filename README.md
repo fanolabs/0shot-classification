@@ -1,8 +1,8 @@
 # README
 
 - Code for
-   - Unknown Intent Detection Using Gaussian Mixture Model with an Application to Zero-shot Intent Classification
-   - Reconstructing Capsule Networks for Zero-shot Intent Classification
+   - Yan, G., Fan, L., Li, Q., Liu, H., Zhang, X., Wu, X. M., & Lam, A. Y. (2020, July). Unknown intent detection using Gaussian mixture model with an application to zero-shot intent classification. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (pp. 1050-1060).
+   - Liu, H., Zhang, X., Fan, L., Fu, X., Li, Q., Wu, X. M., & Lam, A. Y. (2019, November). Reconstructing capsule networks for zero-shot intent classification. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP) (pp. 4799-4809).
 
 ## Environment
 
